@@ -1,0 +1,31 @@
+## Minilux syntax highlighting for nano
+## Website: https://minilux.org
+
+syntax "minilux" "\.mi$"
+header "^#!.*minilux"
+comment "#"
+
+# Keywords
+color brightmagenta "\<(if|else|elseif|while|func|include)\>"
+
+# Built-in functions and statements
+color brightcyan "\<(printf|print|read|len|number|lower|upper|shell|inc|dec|push|pop|shift|unshift|sleep|sockopen|sockwrite|sockread|sockclose)\>"
+
+# Variables
+color brightyellow "\$[a-zA-Z0-9_]+"
+
+# Numbers
+color brightblue "\<[0-9]+\>"
+
+# Operators and symbols
+color brightwhite "(\+|-|\*|/|%|==|!=|>|<|>=|<=|&&|\|\||AND|OR)"
+color brightwhite "[(){}[\]=,;]"
+
+# Strings (Double and Single quotes)
+color green "\"(\\.|[^"])*\""
+color green "'(\\.|[^'])*'"
+
+# Comments
+color cyan "(^|[[:space:]])#.*$"
+# Shebang line
+color brightcyan "^#!.*$"
